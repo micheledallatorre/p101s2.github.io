@@ -1,5 +1,7 @@
 # Info #
 
+DEMO: [https://micheledallatorre.github.io/p101s2/](https://micheledallatorre.github.io/p101s2/)
+
 This project is a D3.js interactive ranking chart based on [Produce 101 Season 2 Rankings](https://p101s2.github.io/).
 
 I extended the original project by loading data dynamically from a shared (and published to the web) Google Sheet file (see details below and in commit [https://github.com/micheledallatorre/p101s2/commit/971314ce06698de25cd805ddb5da1199477f7c17](https://github.com/micheledallatorre/p101s2/commit/971314ce06698de25cd805ddb5da1199477f7c17 "https://github.com/micheledallatorre/p101s2/commit/971314ce06698de25cd805ddb5da1199477f7c17")). 
