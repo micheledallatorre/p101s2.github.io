@@ -36,4 +36,4 @@ You can play with the data by editing the linked Google Sheets [https://docs.goo
     	http-server &
 
 
-2. Aaccess the website at [http://localhost:8080/](http://localhost:8080/ "http://localhost:8080/")
+2. Access the website at [http://localhost:8080/](http://localhost:8080/ "http://localhost:8080/")
