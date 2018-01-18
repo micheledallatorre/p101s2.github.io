@@ -22,7 +22,7 @@ Tutorial: [http://blog.vida.io/2015/11/02/using-google-spreadsheet-data-in-d3-do
 4. Move d3 visualization code into a function, e.g. `draw`
 5. Use tabletop to get data and render the visualization.
 
-
+You can play with the data by editing the linked Google Sheets [https://docs.google.com/spreadsheets/d/1L85YpH5MTVN03cleDU9B6hP-ogmWRTYjgLwYxQw9Scc/edit#gid=214040230](https://docs.google.com/spreadsheets/d/1L85YpH5MTVN03cleDU9B6hP-ogmWRTYjgLwYxQw9Scc/edit#gid=214040230) and reloading the chart to see the effects.
 
 
 
