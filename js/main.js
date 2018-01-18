@@ -37,13 +37,29 @@ var plot = svg.append("g").attr("transform", "translate(" + padding + "," + padd
 
 setXAxis();
 
-// Get data
-d3.csv("produce101.csv", parseLine, function (err, data) {
+// URL of Google Sheets shared file
+var public_spreadsheet_url  = 'https://docs.google.com/spreadsheets/d/1L85YpH5MTVN03cleDU9B6hP-ogmWRTYjgLwYxQw9Scc/pubhtml';
+// Load data from Google Sheets
+function renderSpreadsheetData() {
+    Tabletop.init( { key: public_spreadsheet_url,
+                     callback: draw,
+                     simpleSheet: true } )
+}
+
+function draw(data, tabletop) {
+    // update data
+    data.forEach(function (elem, index, data){
+        elem = parseLine(elem);
+        // update original data array
+        data[index] = elem;
+    });
     totalData = processData(data);
     plotData(data);
     selectLine(dFirst, "#line1");
     showChart("latestRank", true);
-});
+}
+// render the chart using data from Google Sheets
+renderSpreadsheetData();
 
 // Path generator
 var pathGenerator = d3.line()
@@ -126,7 +142,6 @@ function toggleSort(key) {
 // Update chart
 function showChart(key, asc) {
     var sortedData = sortByKey(totalData, key, asc);
-    console.log(sortedData);
     var top = d3.select("#topBody");
 
     top.selectAll("tr.top").remove();
